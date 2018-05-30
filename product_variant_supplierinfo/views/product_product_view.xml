@@ -19,11 +19,9 @@
                 <field name="seller_ids" position="after">
                     <separator string="Variant Suppliers"/>
                     <field name="variant_seller_ids"
-                           context="{'hide_product_id': True}"/>
+                           context="{'hide_product_id': True, 'default_product_tmpl_id': product_tmpl_id, 'default_product_id': active_id}"/>
                     <separator string="Template Suppliers"/>
-                    <field name="tmpl_seller_ids"
-                           domain="[('product_id', '=', False)]"
-                           context="{'hide_product_id': True}"/>
+                    <field name="tmpl_seller_ids" readonly="1"/>
                 </field>
             </field>
         </record>
